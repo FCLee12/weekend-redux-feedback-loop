@@ -7,17 +7,20 @@ import './index.css';
 import App from './components/App/App';
 
 // Reducers
-const feeling = (state = 0, action) => {
+const feeling = (state = '', action) => {
     console.log('feeling rating reducer');
+    if(action.type === 'ADD_FEELING_INPUT') {
+        return state + action.payload;
+    }
     return state;
 };
 
-const understanding = (state = 0, action) => {
+const understanding = (state = '', action) => {
     console.log('understanding rating reducer');
     return state;
 };
 
-const supported = (state = 0, action) => {
+const supported = (state = '', action) => {
     console.log('supported rating reducer');
     return state;
 };
