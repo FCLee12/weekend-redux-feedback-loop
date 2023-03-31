@@ -35,7 +35,9 @@ function SupportedRating() {
 
     return(
         <>
-            <h1>SupportedRating</h1>
+            <h2>How well are you being supported?</h2>
+            <label>Support?</label>
+            <input type='number' placeholder='Enter a number from 1-10' onChange={supportedInputLocal} value={supportedInput} />
             <button onClick={toComments}>Next</button>
         </>
     )
