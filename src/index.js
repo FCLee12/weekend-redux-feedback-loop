@@ -15,12 +15,12 @@ const feeling = (state = '', action) => {
     return state;
 };
 
-const understanding = (state = 0, action) => {
+const understanding = (state = '', action) => {
     console.log('understanding rating reducer');
     return state;
 };
 
-const supported = (state = 0, action) => {
+const supported = (state = '', action) => {
     console.log('supported rating reducer');
     return state;
 };
