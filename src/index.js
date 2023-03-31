@@ -33,6 +33,9 @@ const supported = (state = '', action) => {
 
 const comments = (state = '', action) => {
     console.log('any comments reducer');
+    if(action.type === 'ADD_COMMENTS_INPUT') {
+        return state + action.payload;
+    }
     return state;
 };
 
