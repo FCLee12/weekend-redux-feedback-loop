@@ -4,6 +4,7 @@ function Review() {
     return(
         <>
             <h1>Review</h1>
+            <button>Submit</button>
         </>
     )
 }

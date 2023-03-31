@@ -6,6 +6,13 @@ import { useSelector } from "react-redux";
 import { HashRouter as Router, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+// Components
+import FeelingsRating from '../FeelingsRating/FeelingsRating';
+import UnderstandingRating from '../UnderstandingRating/UnderstandingRating';
+import SupportedRating from '../SupportedRating/SupportedRating';
+import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
+
 function App() {
 
   return (
