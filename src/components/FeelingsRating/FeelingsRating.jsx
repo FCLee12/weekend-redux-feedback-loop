@@ -11,7 +11,9 @@ function FeelingsRating() {
 
     return(
         <>
-            <h1>FeelingsRating</h1>
+            <h2>How are you feeling today?</h2>
+            <label>Feeling?</label>
+            <input type='number' placeholder='Enter a number from 1-10'/>
             <button onClick={toUnderstanding}>Next</button>
         </>
     )
