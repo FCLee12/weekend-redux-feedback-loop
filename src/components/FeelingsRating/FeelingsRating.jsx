@@ -14,11 +14,18 @@ function FeelingsRating() {
     // Takes Feeling Rating input and moves it to Redux Store
         // On Next Button, navigates to UnderstandingRating page
     const toUnderstanding = () => {
-        dispatch({
-            type: 'ADD_FEELING_INPUT',
-            payload: feelingInput
-        })
-        history.push('/understanding')
+        if(feelingInput == '') {
+            alert('Please enter in a number before trying to advance to the next page, thank you!')
+        } else {
+            dispatch({
+                type: 'ADD_FEELING_INPUT',
+                payload: feelingInput
+            })
+            // To clear inputs
+            setFeelingInput('');
+
+            history.push('/understanding')
+        }
     }
     
     // Function to set FeelingInput local state
@@ -30,7 +37,7 @@ function FeelingsRating() {
         <>
             <h2>How are you feeling today?</h2>
             <label>Feeling?</label>
-            <input type='number' placeholder='Enter a number from 1-10' onChange={feelingInputLocal}/>
+            <input type='number' placeholder='Enter a number from 1-10' onChange={feelingInputLocal} value={feelingInput} />
             <button onClick={toUnderstanding}>Next</button>
         </>
     )
