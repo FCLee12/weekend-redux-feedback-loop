@@ -17,11 +17,17 @@ const feeling = (state = '', action) => {
 
 const understanding = (state = '', action) => {
     console.log('understanding rating reducer');
+    if(action.type === 'ADD_UNDERSTANDING_INPUT') {
+        return state + action.payload;
+    }
     return state;
 };
 
 const supported = (state = '', action) => {
     console.log('supported rating reducer');
+    if(action.type === 'ADD_SUPPORTED_INPUT') {
+        return state + action.payload;
+    }
     return state;
 };
 

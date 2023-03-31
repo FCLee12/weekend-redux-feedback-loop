@@ -9,7 +9,7 @@ function FeelingsRating() {
     const dispatch = useDispatch();
 
     // Local state to hold input from input field
-    const [feelingInput, setFeelingInput] = useState(0)
+    const [feelingInput, setFeelingInput] = useState('')
 
     // Takes Feeling Rating input and moves it to Redux Store
         // On Next Button, navigates to UnderstandingRating page
