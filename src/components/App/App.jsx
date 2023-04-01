@@ -12,6 +12,7 @@ import UnderstandingRating from '../UnderstandingRating/UnderstandingRating';
 import SupportedRating from '../SupportedRating/SupportedRating';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Complete from '../Complete/Complete';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
     </Route>
     <Route exact path='/review'>
       <Review />
+    </Route>
+    <Route exact path='/complete'>
+      <Complete />
     </Route>
     </Router>
   );
