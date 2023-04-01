@@ -18,30 +18,30 @@ function App() {
 
   return (
     <Router>
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-    </div>
-    <Route exact path='/'>
-      <FeelingsRating />
-    </Route>
-    <Route exact path='/understanding'>
-      <UnderstandingRating />
-    </Route>
-    <Route exact path='/supported'>
-      <SupportedRating />
-    </Route>
-    <Route exact path='/comments'>
-      <Comments />
-    </Route>
-    <Route exact path='/review'>
-      <Review />
-    </Route>
-    <Route exact path='/complete'>
-      <Complete />
-    </Route>
+      <div className='App'>
+        <header className='App-header'>
+          <h1 className='App-title'>Feedback!</h1>
+          <h4>Don't forget it!</h4>
+        </header>
+      </div>
+      <Route exact path='/'>
+        <FeelingsRating />
+      </Route>
+      <Route exact path='/understanding'>
+        <UnderstandingRating />
+      </Route>
+      <Route exact path='/supported'>
+        <SupportedRating />
+      </Route>
+      <Route exact path='/comments'>
+        <Comments />
+      </Route>
+      <Route exact path='/review'>
+        <Review />
+      </Route>
+      <Route exact path='/complete'>
+        <Complete />
+      </Route>
     </Router>
   );
 }
