@@ -20,7 +20,7 @@ This project is an app built utilizing HTML, CSS, Javascript, Node.js, Express, 
 
 ## Installation
 <ol>
-    <li>Go to: https://github.com/FCLee12/weekend-react-gallery</li>
+    <li>Go to: https://github.com/FCLee12/weekend-redux-feedback-loop</li>
     <li>Look at the top right of the webpage for the 'fork' button</li>
     <li>Create a fork under your own GitHub account ***** Verify you are in your own fork of the project ***** -At the top left of the webpage, you should see the path to the repo -Your GitHub account name should appear before the first '/'</li>
     <li>Open your terminal</li>
