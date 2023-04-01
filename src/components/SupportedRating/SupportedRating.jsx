@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
 function SupportedRating() {
-    console.log('SupportedRating running');
+    // console.log('SupportedRating running');
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -28,6 +28,10 @@ function SupportedRating() {
         }
     }
 
+    const toUnderstanding = () => {
+        history.push('/understanding')
+    }
+
     // Function to set SupportedInput local state
     const supportedInputLocal = (event) => {
         setSupportedInput(event.target.value)
@@ -36,6 +40,7 @@ function SupportedRating() {
     return(
         <>
             <h2>How well are you being supported?</h2>
+            <button onClick={toUnderstanding}>Previous</button>
             <label>Support?</label>
             <input type='number' placeholder='Enter a number from 1-10' onChange={supportedInputLocal} value={supportedInput} />
             <button onClick={toComments}>Next</button>

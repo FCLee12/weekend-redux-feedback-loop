@@ -10,7 +10,7 @@ import App from './components/App/App';
 const feeling = (state = '', action) => {
     console.log('feeling rating reducer');
     if(action.type === 'ADD_FEELING_INPUT') {
-        return state + action.payload;
+        return action.payload;
     } else if(action.type === 'RESET_ALL') {
         return '';
     }
@@ -20,7 +20,7 @@ const feeling = (state = '', action) => {
 const understanding = (state = '', action) => {
     console.log('understanding rating reducer');
     if(action.type === 'ADD_UNDERSTANDING_INPUT') {
-        return state + action.payload;
+        return action.payload;
     } else if(action.type === 'RESET_ALL') {
         return '';
     }
@@ -30,7 +30,7 @@ const understanding = (state = '', action) => {
 const supported = (state = '', action) => {
     console.log('supported rating reducer');
     if(action.type === 'ADD_SUPPORTED_INPUT') {
-        return state + action.payload;
+        return action.payload;
     } else if(action.type === 'RESET_ALL') {
         return '';
     }
@@ -40,7 +40,7 @@ const supported = (state = '', action) => {
 const comments = (state = '', action) => {
     console.log('any comments reducer');
     if(action.type === 'ADD_COMMENTS_INPUT') {
-        return state + action.payload;
+        return action.payload;
     } else if(action.type === 'RESET_ALL') {
         return '';
     }

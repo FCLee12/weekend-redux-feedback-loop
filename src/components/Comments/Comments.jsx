@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
 function Comments() {
-    console.log('Comments running');
+    // console.log('Comments running');
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -24,6 +24,10 @@ function Comments() {
         history.push('/review')
     }
 
+    const toSupported = () => {
+        history.push('/supported')
+    }
+
     // Function to set SupportedInput local state
     const commentsInputLocal = (event) => {
         setCommentsInput(event.target.value)
@@ -32,6 +36,7 @@ function Comments() {
     return(
         <>
             <h2>Any comments you want to leave?</h2>
+            <button onClick={toSupported}>Previous</button>
             <label>Comments</label>
             <input type='text' placeholder='Leave a comment' onChange={commentsInputLocal} value={commentsInput} />
             <button onClick={toReview}>Next</button>
