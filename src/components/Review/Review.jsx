@@ -1,7 +1,10 @@
-import { useSelector } from "react-redux";
+import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 
 function Review() {
     console.log('Review running');
+
+    const dispatch = useDispatch();
 
     // Pulling info from Redux Store
     const feeling = useSelector(store => store.feeling)
@@ -18,6 +21,15 @@ function Review() {
             support: supported,
             comments: comments
         }
+
+        axios.post('/feedback', feedbackObj)
+        .then(response => {
+            dispatch({
+                type: 'RESET_ALL'
+            })
+        }).catch(error => {
+            console.log('Error POSTing to DB', error);
+        })
     }
 
     return(
