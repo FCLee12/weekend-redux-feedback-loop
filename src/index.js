@@ -11,6 +11,8 @@ const feeling = (state = '', action) => {
     console.log('feeling rating reducer');
     if(action.type === 'ADD_FEELING_INPUT') {
         return state + action.payload;
+    } else if(action.type === 'RESET_ALL') {
+        return '';
     }
     return state;
 };
@@ -19,6 +21,8 @@ const understanding = (state = '', action) => {
     console.log('understanding rating reducer');
     if(action.type === 'ADD_UNDERSTANDING_INPUT') {
         return state + action.payload;
+    } else if(action.type === 'RESET_ALL') {
+        return '';
     }
     return state;
 };
@@ -27,6 +31,8 @@ const supported = (state = '', action) => {
     console.log('supported rating reducer');
     if(action.type === 'ADD_SUPPORTED_INPUT') {
         return state + action.payload;
+    } else if(action.type === 'RESET_ALL') {
+        return '';
     }
     return state;
 };
@@ -35,6 +41,8 @@ const comments = (state = '', action) => {
     console.log('any comments reducer');
     if(action.type === 'ADD_COMMENTS_INPUT') {
         return state + action.payload;
+    } else if(action.type === 'RESET_ALL') {
+        return '';
     }
     return state;
 };

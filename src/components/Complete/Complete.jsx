@@ -7,6 +7,14 @@ function Complete() {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    const resetAll = () => {
+        dispatch({
+            type: 'RESET_ALL'
+        })
+
+        history.push('/');
+    }
+
     return(
         <>
             <div>
@@ -14,7 +22,7 @@ function Complete() {
             </div>
             <div>
                 <h2>Thank You!</h2>
-                <button></button>
+                <button onClick={resetAll}>Leave New Feedback</button>
             </div>
         </>
     )
