@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
 function UnderstandingRating() {
-    console.log('UnderstandingRating running');
+    // console.log('UnderstandingRating running');
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -28,6 +28,10 @@ function UnderstandingRating() {
         }
     }
 
+    const toFeeling = () => {
+        history.push('/');
+    }
+
     // Function to set UnderstandingInput local state
     const understandingInputLocal = (event) => {
         setUnderstandingInput(event.target.value)
@@ -36,6 +40,7 @@ function UnderstandingRating() {
     return(
         <>
             <h2>How well are you understanding the content?</h2>
+            <button onClick={toFeeling}>Previous</button>
             <label>Understanding?</label>
             <input type='number' placeholder='Enter a number from 1-10' onChange={understandingInputLocal} value={understandingInput} />
             <button onClick={toSupported}>Next</button>
